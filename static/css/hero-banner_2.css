@@ -4,14 +4,19 @@
   background-color: var(--background);
 }
 
+#hero-banner .hero-banner-row {
+    min-height: 80vh;
+}
+
 h1 {
     color: rgb(190, 190, 190)
 }
 
 #hero-div h1{
-    font-size: 8rem;
+    font-size: 7.6rem;
     font-weight: 100;
-    letter-spacing: -4px;
+    letter-spacing: -.4px;
+    margin-bottom: 50px;
 }
 
 .lead {
@@ -21,65 +26,40 @@ h1 {
 }
 
 #hero-div #developer-heading {
-    font-size: 120px;
+    font-size: 7.5rem;
     font-weight: 700;
 }
 
 #row-3 h1 {
-    font-size: 5rem;
+    margin-top: 30px;
+    font-size: 4.6rem;
     font-weight: 100;
 }
 
-.hero-banner-row {
-  min-height: 100vh;
-  margin-right: 0 !important;
+@media (max-width: 768px) {
+    #hero-div h1{
+        font-size: 2.3rem;
+    }
+    
+    
+    #hero-div #developer-heading {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
 }
 
-.btn-my-work {
-  background: linear-gradient(to bottom right, #ef4765, #FF9A5A);
-  border: 0;
-  border-radius: 12px;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 2.5;
-  outline: transparent;
-  padding: 2px 30px;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow 0.2s ease-in-out;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-}
-
-.btn-my-work:not([disabled]):focus {
-  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
-    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
-}
-
-.btn-my-work:not([disabled]):hover {
-  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
-    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
-}
-
-.btn-connect {
-    border-radius: 12px !important;
-}
-
-.btn-connect:not([disabled]):focus {
-  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(255, 255, 255, 0.5),
-    0.125rem 0.125rem 1rem rgba(255, 255, 255, 0.5);
-}
-
-.btn-connect:not([disabled]):hover {
-  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(255, 255, 255, 0.5),
-    0.125rem 0.125rem 1rem rgba(255, 255, 255, 0.5);
+@media (max-width: 576px) {
+    #hero-div {
+        margin-top: 150px;
+        margin-bottom: 80px;
+    }
 }
 
 #row-3 {
     font-size: 100px;
 }
+

@@ -13,6 +13,7 @@ html {
 
 body {
   font-family: "Space Grotesk", sans-serif;
+  background-color: var(--background);
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -25,7 +26,12 @@ section {
 }
 
 /* --------- Navbar -------- */
+.navbar-container {
+    background-color: var(--background);
+}
+
 .navbar {
+    width: 92%;
     background-color: var(--background);
 }
 
