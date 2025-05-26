@@ -2,10 +2,11 @@
 
 #project-container{
     min-height: 85vh;
+    scroll-margin: 80px;
 }
 
-#projects-section {
-    /* scroll-margin: 20px; */
+.header-row {
+    width: 98%;
 }
 
 #project-header {
