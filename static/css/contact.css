@@ -1,6 +1,5 @@
-#contact-me {
-  height: 80vh;
-  scroll-margin-top: 60px;
+.contact-me-container {
+  height: 75vh;
 }
 
 .contact-form-container {
