@@ -20,9 +20,9 @@ body {
 }
 
 section {
-  min-height: 80vh;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  min-height: 90vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 /* --------- Navbar -------- */
@@ -31,8 +31,12 @@ section {
 }
 
 .navbar {
-    width: 92%;
+    /* width: 92%; */
     background-color: var(--background);
+}
+
+.navbar-bottom-border {
+    border-bottom: 1px solid white; /* 3px solid border in your vibrant amber accent color */
 }
 
 .navbar-brand-custom {
@@ -49,6 +53,13 @@ section {
   margin: 0 15px;
 }
 
+.scrolled-down{
+  transform:translateY(-100%); transition: all 0.3s ease-in-out;
+}
+.scrolled-up{
+  transform:translateY(0); transition: all 0.3s ease-in-out;
+}
+
 @media (min-width: 992px) {
   .navbar-nav.me-auto,
   .navbar-nav.ms-auto {
@@ -61,7 +72,3 @@ section {
   }
 }
 
-.navbar .container-fluid {
-  height: 100%;
-  align-items: center;
-}
