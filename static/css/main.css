@@ -1,0 +1,61 @@
+:root {
+  --background: #212222; /* Your main charcoal background */
+  --color-text-light: #ced4da; /* Your light grey for body text and light elements */
+  --color-primary: #223344; /* Deep Night Blue */
+  --color-accent: #f39c12; /* Your new deep night blue/dark grey-blue. Use for H1/H2, darker section backgrounds, prominent elements. */
+  --color-accent-1: #ef4765;
+  --color-accent-2: #ff9a5a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+section {
+  min-height: 80vh;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* --------- Navbar -------- */
+.navbar {
+    background-color: var(--background);
+}
+
+.navbar-brand-custom {
+  font-size: 3.5rem;
+  line-height: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-image 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  background-image: linear-gradient(to bottom right, #ef4765, #ff9a5a);
+}
+
+.navbar-nav .nav-item {
+  margin: 0 15px;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav.me-auto,
+  .navbar-nav.ms-auto {
+    margin: 0 !important;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    display: none !important;
+    flex-basis: auto;
+  }
+}
+
+.navbar .container-fluid {
+  height: 100%;
+  align-items: center;
+}
