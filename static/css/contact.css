@@ -1,149 +1,26 @@
-.contact-me-container {
-  height: 75vh;
+.contact-form-btn {
+    width: 100%;
 }
 
-.contact-form-container {
-  max-width: 700px; /* Increased width */
-  margin: auto;
-  padding: 2rem;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+#contact-text #heading{
+    font-size: 65px;
+    font-weight: 500;
+    margin-bottom: -10px;
 }
 
-.contact-form-title {
-  font-size: 2.75rem; /* Larger title */
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 1.75rem; /* Increased margin */
-  line-height: 1.1; /* Tighter line height */
+#contact-text #sub-heading{
+    font-size: 55px;
+    font-weight: 300;
 }
 
-.contact-form-subtitle {
-  color: #555; /* Slightly darker subtitle */
-  margin-bottom: 2.25rem; /* Increased margin */
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.contact-form {
-  /* Handled by Crispy Forms, but you can add general form styles here */
-}
-
-/* Form Group Styles (Handled by Crispy, but you can override) */
-.form-group {
-  margin-bottom: 2rem; /* Increased spacing between form groups */
-}
-
-.form-control {
-  display: block;
-  width: 100%;
-  padding: 0.85rem; /* Slightly increased padding */
-  font-size: 1.05rem;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 10px; /* More rounded inputs */
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.form-control:focus {
-  border-color: #007bff;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
-}
-
-.form-control::placeholder {
-  color: #999; /* Slightly lighter placeholder */
-  opacity: 1;
-}
-
-.form-control::-ms-input-placeholder {
-  color: #999;
-  opacity: 1;
-}
-
-.form-control:-ms-input-placeholder {
-  color: #999;
-  opacity: 1;
-}
-
-.form-textarea {
-  height: auto;
-  min-height: 140px; /* Increased height */
-  resize: vertical;
-}
-
-.submit-btn {
-  padding: 0.9rem 2rem; /* Increased button padding */
-  font-size: 1.1rem;
-  font-weight: 600; /* Semibold button */
-  color: white;
-  background-color: #007bff;
-  border: none;
-  border-radius: 10px; /* More rounded button */
-  cursor: pointer;
-  transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, transform 0.1s ease; /* Added transform */
-  /* width: 100%; */
-  display: block; /* Ensure full width */
-  text-align: center;
-}
-
-.submit-btn:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px); /* Slight lift on hover */
-}
-
-.submit-btn:focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.3rem rgba(0, 123, 255, 0.5); /* Stronger focus */
-}
-
-.text-danger {
-  color: #dc3545 !important;
-  font-size: 0.9rem; /* Slightly larger error text */
-  margin-top: 0.75rem; /* Increased margin */
-}
-
-/* Override Crispy Form Styles */
-.form-horizontal .control-label {
-  text-align: left;
-  margin-bottom: 0.75rem; /* Increased label margin */
-  font-weight: 600; /* Semibold labels */
-  color: #333; /* Darker label color */
-}
-
-.form-horizontal .col-md-9 {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.form-horizontal .form-group {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.asteriskField {
-  display: none;
-}
-
-/* Media query for smaller screens (smartphones) */
-@media (max-width: 768px) {
-  /* Adjust 768px as needed */
-
-  .contact-banner {
-    padding: 50px 10px; /* Reduce padding */
-  }
-
-  .contact-banner form {
-    max-width: 90%; /* Make form take up most of screen width */
-    padding: 20px; /* Reduce padding */
-  }
-
-  .contact-banner input,
-  .contact-banner textarea {
-    font-size: 14px; /* Smaller font size */
-  }
+@media screen and (max-width: 798px) {
+    #contact-text #header {
+        margin-top:20px;
+        font-size: 50px;
+        font-weight: 500;
+    }
+    
+    #contact-text #sub-header{
+        font-size: 35px;
+    }
 }
