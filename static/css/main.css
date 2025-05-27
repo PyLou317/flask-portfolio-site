@@ -21,8 +21,48 @@ body {
 
 section {
   min-height: 90vh;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header-row {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.header {
+  font-weight: 700; /* Example: A strong weight */
+  font-size: 2rem; /* Adjust size as needed */
+
+  /* Base Text Gradient: Uses your light grey text color by default */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to bottom right, var(--color-text-light), var(--color-text-light));
+
+  /* Smooth transition for hover effects */
+  transition: background-image 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  display: inline-block; /* Essential for transform and text-shadow to apply correctly */
+}
+
+.header:hover {
+  /* Text gradient shifts to your accent/primary colors on hover */
+  background-image: linear-gradient(to bottom right, var(--color-accent-1), var(--color-accent-2));
+
+  /* Subtle glowing text-shadow on hover */
+  text-shadow:
+    0 0 .5rem rgba(0, 0, 0, 0.3), /* Base shadow for depth */
+    0 0 1rem rgba(243, 156, 18, 0.4), /* Accent color glow */
+    0 0 1.5rem rgba(34, 51, 68, 0.3);   /* Primary color glow */
+
+  /* Optional: Slightly lift the text for interactivity */
+  transform: translateY(-3px);
 }
 
 /* --------- Navbar -------- */
@@ -71,4 +111,5 @@ section {
     flex-basis: auto;
   }
 }
+
 

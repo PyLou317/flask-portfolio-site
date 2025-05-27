@@ -1,12 +1,48 @@
 <div class="container contact-me-container">
-    <div class="row">
-        <span id="project-header"class="fw-bold mb-5 border-bottom">Contact me</span>
-    </div>
+  <div class="row border-bottom">
+    <a href="#contact-me"> 
+        <span id="project-header" class="fw-bold mb-2 header">Connect with me</span>
+    </a>
+  </div>
 
-    <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-8 p-4">
-            <form method="post">
-            </form>
+  <div id="contact-text" class="row text-light text-end my-5">
+    <span id="heading">Want to work together?</span>
+    <span id="sub-heading">Send me a message</span>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8 col-sm-10 p-4">
+      <form method="post">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" name="formId1" id="formId1" placeholder="" />
+          <label for="formId1"><i class="fa-regular fa-user"></i> Name</label>
         </div>
+
+        <div class="form-floating mb-3">
+          <input
+            type="email"
+            class="form-control"
+            name=""
+            id="email"
+            aria-describedby="emailHelpId"
+            placeholder="abc@mail.com"
+          />
+          <label for="email" class="form-label"><i class="fa-regular fa-envelope"></i> Email</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <textarea
+            class="form-control"
+            name="message"
+            id="userMessage"
+            placeholder="Your message here"
+            style="height: 100px"
+          ></textarea>
+          <label for="userMessage">Your message here</label>
+        </div>
+
+        <button type="submit" class="btn primary-btn contact-form-btn mt-2">Submit</button>
+      </form>
     </div>
+  </div>
 </div>

@@ -10,11 +10,11 @@
 }
 
 #left-hb {
-    margin-bottom: 10%;
+  margin-bottom: 10%;
 }
 
-.btn-my-work {
-  background: linear-gradient(to bottom right, #ef4765, #FF9A5A);
+.primary-btn {
+  background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
   border: 0;
   border-radius: 12px;
   color: #ffffff;
@@ -34,18 +34,18 @@
   white-space: nowrap;
 }
 
-.btn-my-work:not([disabled]):focus {
+.primary-btn:not([disabled]):focus {
   box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
     0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
-.btn-my-work:not([disabled]):hover {
+.primary-btn:not([disabled]):hover {
   box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
     0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
 .btn-connect {
-    border-radius: 12px !important;
+  border-radius: 12px !important;
 }
 
 .btn-connect:not([disabled]):focus {
@@ -56,4 +56,27 @@
 .btn-connect:not([disabled]):hover {
   box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(255, 255, 255, 0.5),
     0.125rem 0.125rem 1rem rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 991px) {
+  #left-hb {
+    margin-bottom: 0;
+    margin-top: 70px;
+  }
+
+  #right-hb {
+    margin-top: 0;
+  }
+
+  .btn-my-work, .btn-connect {
+    font-size: 16px;
+  }
+
+  .btn-my-work{
+    padding: 2px 25px;
+  }
+
+  .btn-connect {
+    padding: 10px 25px;
+  }
 }
