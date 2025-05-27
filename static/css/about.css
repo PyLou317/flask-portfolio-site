@@ -1,7 +1,7 @@
 @import url('main.css');
 
 .about-image img {
-  max-width: 300px;
+  /* max-width: 350px; */
   border-radius: 50%; /* Make the image circular */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -12,7 +12,7 @@
 }
 
 .about-text h3 {
-    color: var(--color-accent-2)
+  color: var(--color-accent-2);
 }
 
 .about-text h2 {
