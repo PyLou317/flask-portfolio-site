@@ -5,6 +5,12 @@
   --color-accent: #f39c12; /* Your new deep night blue/dark grey-blue. Use for H1/H2, darker section backgrounds, prominent elements. */
   --color-accent-1: #ef4765;
   --color-accent-2: #ff9a5a;
+  --color-inner-circle-border: #feffb8; /* Light purple for the immediate border/glow */
+  --color-wider-circle: #bfc220;
+  --site-image-placeholder-bg: #ced4da;
+  --site-card-background: #ffffff;
+  --site-dark-text: #212529; /* Darker text for titles within cards */
+  --site-muted-text: #6c757d;
 }
 
 html {
@@ -12,7 +18,7 @@ html {
 }
 
 body {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   background-color: var(--background);
   display: flex;
   flex-direction: column;
@@ -26,7 +32,7 @@ section {
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #header-row {
@@ -56,10 +62,8 @@ a {
   background-image: linear-gradient(to bottom right, var(--color-accent-1), var(--color-accent-2));
 
   /* Subtle glowing text-shadow on hover */
-  text-shadow:
-    0 0 .5rem rgba(0, 0, 0, 0.3), /* Base shadow for depth */
-    0 0 1rem rgba(243, 156, 18, 0.4), /* Accent color glow */
-    0 0 1.5rem rgba(34, 51, 68, 0.3);   /* Primary color glow */
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3), /* Base shadow for depth */ 0 0 1rem rgba(243, 156, 18, 0.4),
+    /* Accent color glow */ 0 0 1.5rem rgba(34, 51, 68, 0.3); /* Primary color glow */
 
   /* Optional: Slightly lift the text for interactivity */
   transform: translateY(-3px);
@@ -67,16 +71,16 @@ a {
 
 /* --------- Navbar -------- */
 .navbar-container {
-    background-color: var(--background);
+  background-color: var(--background);
 }
 
 .navbar {
-    /* width: 92%; */
-    background-color: var(--background);
+  /* width: 92%; */
+  background-color: var(--background);
 }
 
 .navbar-bottom-border {
-    border-bottom: 1px solid white; /* 3px solid border in your vibrant amber accent color */
+  border-bottom: 1px solid white; /* 3px solid border in your vibrant amber accent color */
 }
 
 .navbar-brand-custom {
@@ -93,11 +97,13 @@ a {
   margin: 0 15px;
 }
 
-.scrolled-down{
-  transform:translateY(-100%); transition: all 0.3s ease-in-out;
+.scrolled-down {
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
 }
-.scrolled-up{
-  transform:translateY(0); transition: all 0.3s ease-in-out;
+.scrolled-up {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
 }
 
 @media (min-width: 992px) {
@@ -111,5 +117,3 @@ a {
     flex-basis: auto;
   }
 }
-
-
