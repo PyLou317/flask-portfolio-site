@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, redirect, flash, url_for
+from flask_wtf.csrf import CSRFProtect
 
 from decouple import config
 import smtplib
 from email.mime.text import MIMEText
-from flask_wtf.csrf import CSRFProtect
 
 
 app = Flask(__name__)
