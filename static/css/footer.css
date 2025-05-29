@@ -1,0 +1,28 @@
+@import url('main.css');
+
+.fa-linkedin:hover {
+    color: #0072b1;
+}
+
+.fa-facebook-f:hover {
+    color: #1877F2;
+}
+
+.fa-instagram:hover {
+    color: #e56969;
+}
+
+.fa-github:hover {
+    
+}
+
+#footer-name {
+    max-width: fit-content;
+}
+
+.footer-container h5:hover {
+    text-shadow:
+  1px 1px 2px var(--color-accent-2),
+  0 0 1em var(--color-accent-2),
+  0 0 0.2em var(--color-accent-2);
+}
