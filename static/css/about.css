@@ -1,8 +1,7 @@
 @import url('main.css');
 
-.about-image img {
-  /* max-width: 350px; */
-  border-radius: 50%; /* Make the image circular */
+.about-image {
+  border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
