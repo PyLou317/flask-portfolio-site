@@ -5,8 +5,6 @@ from decouple import config
 import smtplib
 from email.mime.text import MIMEText
 
-from modules import make_ordinal
-
 app = Flask(__name__)
 app.secret_key = config('FLASK_SECRET_KEY')
 csrf = CSRFProtect(app)
@@ -58,13 +56,12 @@ def index():
 
 @app.route("/project/<num>")
 def project_detail(num):
+    print(projects_list[int(num)])
     try:
-        proj_dict = projects_list[int(num) - 1]
+        proj_dict = projects_list[int(num)]
     except:
         return f"<h1>Invalid value for Project: {num}</h1>"
-    # a little bonus function, imported on line 2 above
-    ord = make_ordinal( int(num) )
-    return render_template('project_detail.html', proj=proj_dict, ord=ord, the_title=proj_dict['Name'])
+    return render_template('project_detail.html', proj=proj_dict, project_name=proj_dict['name'])
     
 
 @app.route('/send_email', methods=['POST'])
