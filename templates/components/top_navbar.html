@@ -1,13 +1,13 @@
 <nav class="container navbar navbar-expand-lg navbar-dark sticky-top shadow-sm navbar-bottom-border autohide">
     <div class="container-fluid d-flex justify-content-between align-items-center">
         <ul class="navbar-nav d-none d-lg-flex me-auto">
-            <li class="nav-item mx-3"><a class="nav-link" href="#"><span class="text-gradient">HOME</span></a></li>
-            <li class="nav-item mx-3"><a class="nav-link" href="#projects-section"><span class="text-gradient">PROJECTS</span></a></li>
+            <li class="nav-item mx-3"><a class="nav-link" href="{{ url_for('index') }}"><span class="text-gradient">HOME</span></a></li>
+            <li class="nav-item mx-3"><a class="nav-link" href="{{ url_for('index') }}#projects-section"><span class="text-gradient">PROJECTS</span></a></li>
         </ul>
 
         <ul class="navbar-nav d-none d-lg-flex ms-auto">
-            <li class="nav-item mx-3"><a class="nav-link" href="#about-me"><span class="text-gradient">ABOUT</span></a></li>
-            <li class="nav-item mx-3"><a class="nav-link" href="#contact-me"><span class="text-gradient">CONNECT</span></a></li>
+            <li class="nav-item mx-3"><a class="nav-link" href="{{ url_for('index') }}#about-me"><span class="text-gradient">ABOUT</span></a></li>
+            <li class="nav-item mx-3"><a class="nav-link" href="{{ url_for('index') }}#contact-me"><span class="text-gradient">CONNECT</span></a></li>
         </ul>
 
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMobileContent" aria-controls="navbarNavMobileContent" aria-expanded="false" aria-label="Toggle navigation">
