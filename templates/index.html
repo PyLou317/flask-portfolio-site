@@ -1,23 +1,42 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 
-{% block title %}
-  Home - My Portfolio
-{% endblock %}
+{% block title %} Home - My Portfolio {% endblock %} 
 
 {% block content %}
-  <header id="hero-banner">
-    {% include 'components/hero_banner.html' %}
-  </header>
+<header id="hero-banner">{% include 'components/hero_banner.html' %}</header>
 
-  <section id="projects-section">
-    {% include 'components/projects.html' %}
-  </section>
+<section id="about-me" class="about-banner">
+  {% include 'components/about.html' %}
+</section>
 
-  <section id="about-me" class="about-banner">
-    {% include 'components/about.html' %}
-  </section>
+<div>
+    <div id="" class="container section-container">
+        {% include 'components/skills.html' %}
+    </div>
+</div>
 
-  <section id="contact-me" class="contact-banner">
+<section id="projects-section">
+  <div id="" class="container section-container">
+    <div id="header-row" class="row text-center">
+      <a href="#projects-section">
+        <span id="project-header" class="header">LATEST WORK</span>
+      </a>
+    </div>
+    <div class="row d-flex justify-content-center project-container g-4 mt-3 mb-5">
+      {% for project in projects %} {% include 'components/project_card.html' %} {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="contact-me" class="contact-banner">
+  <div class="container section-container">
+    <div id="header-row" class="row text-center">
+      <a href="#contact-me">
+        <h1 class="title-header">LET'S WORK TOGETHER!</h1>
+      </a>
+    </div>
     {% include 'components/contact.html' %}
-  </section>
+  </div>
+</section>
+
 {% endblock %}

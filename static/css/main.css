@@ -1,16 +1,64 @@
 :root {
-  --background: #212222; /* Your main charcoal background */
-  --color-text-light: #ced4da; /* Your light grey for body text and light elements */
-  --color-primary: #223344; /* Deep Night Blue */
-  --color-accent: #f39c12; /* Your new deep night blue/dark grey-blue. Use for H1/H2, darker section backgrounds, prominent elements. */
+  --background: #1b1c1c; /* main charcoal background */
+  --section-background: rgba(31, 31, 31, 0.562);
+  --color-text-light: rgb(149, 149, 149); /* light grey for body text and light elements */
+  --color-accent: #f39c12; 
   --color-accent-1: #ef4765;
   --color-accent-2: #ff9a5a;
-  --color-inner-circle-border: #feffb8; /* Light purple for the immediate border/glow */
-  --color-wider-circle: #bfc220;
   --site-image-placeholder-bg: #ced4da;
   --site-card-background: #ffffff;
   --site-dark-text: #212529; /* Darker text for titles within cards */
   --site-muted-text: #6c757d;
+}
+
+/* Larsseit Regular (or Normal) */
+@font-face {
+    font-family: 'Larsseit'; /* This is the name you'll use in your CSS */
+    src: url('../fonts/larsseit_regular-webfont.woff2') format('woff2'), /* Adjust path if needed */
+         url('../fonts/larsseit_regular-webfont.woff') format('woff');
+    font-weight: 400; /* or 'normal' */
+    font-style: normal;
+    font-display: swap; /* Important for performance */
+}
+
+/* Larsseit Medium */
+@font-face {
+    font-family: 'Larsseit';
+    src: url('../fonts/larsseitmedium-webfont.woff2') format('woff2'),
+         url('../fonts/larsseitmedium-webfont.woff') format('woff');
+    font-weight: 500; /* or a custom value if your font specifies it */
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Larsseit Bold */
+@font-face {
+    font-family: 'Larsseit';
+    src: url('../fonts/larsseitbold-webfont.woff2') format('woff2'),
+         url('../fonts/larsseitbold-webfont.woff') format('woff');
+    font-weight: 700; /* or 'bold' */
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Larsseit Extra Bold */
+@font-face {
+    font-family: 'Larsseit';
+    src: url('../fonts/larsseitextrabold-webfont.woff2') format('woff2'),
+         url('../fonts/larsseitextrabold-webfont.woff') format('woff');
+    font-weight: 900; /* or 'bold' */
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Larsseit Thin Italic */
+@font-face {
+    font-family: 'Larsseit';
+    src: url('../fonts/larsseitthinitalic-webfont.woff2') format('woff2'),
+         url('../fonts/larsseitthinitalic-webfont.woff') format('woff');
+    font-weight: 100; /* or 'thin' if your font supports it */
+    font-style: italic;
+    font-display: swap;
 }
 
 html {
@@ -18,7 +66,7 @@ html {
 }
 
 body {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Larsseit', sans-serif;
   background-color: var(--background);
   display: flex;
   flex-direction: column;
@@ -26,9 +74,9 @@ body {
 }
 
 section {
-  min-height: 90vh;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  min-height: 100vh;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 a {
@@ -36,39 +84,35 @@ a {
 }
 
 #header-row {
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
-  padding-right: 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .header {
-  font-weight: 700; /* Example: A strong weight */
-  font-size: 2rem; /* Adjust size as needed */
-
-  /* Base Text Gradient: Uses your light grey text color by default */
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to bottom right, var(--color-text-light), var(--color-text-light));
-
-  /* Smooth transition for hover effects */
-  transition: background-image 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-  display: inline-block; /* Essential for transform and text-shadow to apply correctly */
+  font-weight: bolder;
+  font-size: 7rem;
+  color: white;
+  letter-spacing: -6px;
+  transition: transform 0.3s ease-out;
 }
 
 .header:hover {
-  /* Text gradient shifts to your accent/primary colors on hover */
-  background-image: linear-gradient(to bottom right, var(--color-accent-1), var(--color-accent-2));
-
-  /* Subtle glowing text-shadow on hover */
-  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3), /* Base shadow for depth */ 0 0 1rem rgba(243, 156, 18, 0.4),
-    /* Accent color glow */ 0 0 1.5rem rgba(34, 51, 68, 0.3); /* Primary color glow */
-
-  /* Optional: Slightly lift the text for interactivity */
   transform: translateY(-3px);
 }
 
+.section-container {
+    background-color: var(--section-background);
+    border-radius: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.icon-img {
+    width: 70px;
+    height: 70px;
+}
 /* --------- Navbar -------- */
 .navbar-container {
   background-color: var(--background);
@@ -106,14 +150,52 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-@media (min-width: 992px) {
-  .navbar-nav.me-auto,
-  .navbar-nav.ms-auto {
-    margin: 0 !important;
-  }
+.primary-btn {
+  background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
+  border: 0;
+  border-radius: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 2px 30px;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
 
-  .navbar-expand-lg .navbar-collapse {
-    display: none !important;
-    flex-basis: auto;
-  }
+.primary-btn:not([disabled]):focus {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.primary-btn:not([disabled]):hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+@media (min-width: 992px) {
+    .navbar-nav.me-auto,
+    .navbar-nav.ms-auto {
+        margin: 0 !important;
+    }
+    
+    .navbar-expand-lg .navbar-collapse {
+        display: none !important;
+        flex-basis: auto;
+    }
+    
+}
+
+@media (max-width: 992px) {
+.header {
+  font-size: 3.5rem;
+}
 }

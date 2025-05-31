@@ -2,25 +2,10 @@
     width: 100%;
 }
 
-#contact-text #heading{
-    font-size: 65px;
-    font-weight: 500;
-    margin-bottom: -10px;
-}
-
-#contact-text #sub-heading{
-    font-size: 55px;
-    font-weight: 300;
-}
 
 @media screen and (max-width: 798px) {
-    #contact-text #header {
-        margin-top:20px;
-        font-size: 50px;
-        font-weight: 500;
+    #contact-me h1 {
+        font-size: 3.5rem;
     }
     
-    #contact-text #sub-header{
-        font-size: 35px;
-    }
 }

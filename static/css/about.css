@@ -1,27 +1,59 @@
 @import url('main.css');
 
-.about-image {
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+.about-container {
+  background-color: var(--section-background);
+  padding: 100px 0px 100px 0px;
 }
 
-.about-text {
-  flex: 2; /* Take up more space than the image */
-  text-align: left;
+.extra-margin {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.about-container .row {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.about-image {
+  border-radius: 50%;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+  width: 350px;
+}
+
+.about-text-1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.about-text-2 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #ffffff;
 }
 
 .about-text h3 {
   color: var(--color-accent-2);
 }
 
-.about-text h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
 .about-text p {
-  font-size: 18px;
+  font-size: 1.3rem;
   line-height: 1.6;
   color: #e0e0e0;
+}
+
+@media (max-width: 992px) {
+  .about-container {
+    padding: 60px 0 60px 0;
+  }
+
+  .about-text {
+    margin: 0 20px 0 20px;
+  }
+
+  .about-image {
+    width: 300px;
+    margin-top: 50px;
+  }
 }

@@ -2,54 +2,40 @@
 
 #hero-banner {
   background-color: var(--background);
+  height: 100vh;
+}
+
+.title-header {
+  color: white;
+  font-size: 9.75rem;
+  letter-spacing: -8px;
+  font-weight: bolder;
+  margin-bottom: -10px;
+}
+
+.tag-line {
+  font-size: 2.1rem;
+  font-weight: 100;
+  color: var(--color-text-light);
+}
+
+.tag-line a {
+  color: var(--color-text-light);
 }
 
 .hero-banner-row {
-  min-height: 85vh;
+  min-height: 100vh;
   margin-right: 0 !important;
 }
 
-#hero-img {
-    width: 400px;
-    border-radius: 50%;
-    border: 5px solid white;
-    object-fit: cover;
-    z-index: 2;
-}
-
-.primary-btn {
-  background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
-  border: 0;
-  border-radius: 12px;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 2.5;
-  outline: transparent;
-  padding: 2px 30px;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow 0.2s ease-in-out;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-}
-
-.primary-btn:not([disabled]):focus {
-  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
-    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
-}
-
-.primary-btn:not([disabled]):hover {
-  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
-    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
-}
-
 .btn-connect {
-  border-radius: 12px !important;
+  border-radius: 30px !important;
+  color: var(--color-text-light);
+  border: 1px solid var(--color-text-light);
+}
+
+.btn-connect:hover {
+    color: white;
 }
 
 .btn-connect:not([disabled]):focus {
@@ -63,33 +49,23 @@
 }
 
 @media screen and (max-width: 991px) {
-.hero-banner-row{
-    margin-left: auto;
-}
-
-  #left-hb {
-    margin-bottom: 0;
-    margin-top: 70px;
+  .title-header {
+    font-size: 4.8rem;
+    letter-spacing: -2px;
   }
 
-  #right-hb {
-    margin-top: 40px;
-    margin-bottom: 20px;
+  #tag-line-div {
+    align-items: center;
   }
 
-  #hero-img {
-    width: 300px;
-}
-
-  .btn-my-work, .btn-connect {
-    font-size: 16px;
-  }
-
-  .btn-my-work{
-    padding: 2px 25px;
+  .tag-line {
+    font-size: 1.4rem;
+    display: block;
+    letter-spacing: -.5px;
   }
 
   .btn-connect {
-    padding: 10px 25px;
+    font-size: 0.8rem;
+    padding: 5px 15px;
   }
-}
+  }
