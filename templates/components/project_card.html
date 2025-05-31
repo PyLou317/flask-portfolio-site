@@ -1,0 +1,37 @@
+<div class="col-sm-12 col-md-10 col-lg-8 my-5">
+    <div class="project-card bg-light rounded-3 d-flex h-100 flex-column">
+        <div class="project-img-container w-100 bg-gray-300 d-flex align-items-center justify-content-center">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="{{ project[4] }}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="{{ project[5] }}" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="project-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+            <div>
+                <h3 class="project-title fw-bold mb-2 text-dark">
+                    <a href="{{ url_for( 'project_detail', num=project[0] ) }}" class="text-decoration-none">{{ project[1] }} <i class="fa-solid fa-circle-arrow-right"></i></a>
+                </h3>
+                <p class="project-description">{{ project[2] }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+    
+            
+
+
+    

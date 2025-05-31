@@ -2,6 +2,7 @@
 
 .project-container .row .project-card-div {
   height: 500px;
+  margin-top: 200px;
 }
 
 project-card {

@@ -5,6 +5,7 @@ from decouple import config
 import smtplib
 from email.mime.text import MIMEText
 
+from modules import make_ordinal
 
 app = Flask(__name__)
 app.secret_key = config('FLASK_SECRET_KEY')
@@ -15,11 +16,56 @@ GMAIL_SENDER_EMAIL = config('GMAIL_SENDER_EMAIL', 'your_gmail_address@gmail.com'
 GMAIL_APP_PASSWORD = config('GMAIL_APP_PASSWORD', 'your_gmail_app_password')
 RECEIVER_EMAIL = config('RECEIVER_EMAIL', 'the_email_you_want_messages_sent_to@example.com')
 
+projects_list = {
+    1: {
+        'id': 1,
+        'name': 'Evergreen Financial',
+        'description': 'A personal finance tracker with smart categorization and budget setting, to help you manage your day-to-day spending.',
+        'url': '',
+        'img_path1': 'static/images/evergreen_finance1.png',
+        'img_path2': 'static/images/evergreen_finance2.png'
+        },
+    
+    2: {
+        'id': 2,
+        'name': 'Table Perks',
+        'description': 'Mobile first restaurant loyalty app. Designed to incentavize guest to bring referrals by offering special deals and reward points for each visit.',
+        'url': 'https://bring-a-friend-production.up.railway.app/',
+        'img_path1': 'static/images/table_perks1.png',
+        'img_path2': ''
+        },
+    
+    3: {
+        'id': 3,
+        'name': 'My Portfolio Site',
+        'description': 'A simple Flask portfolio site with Gmail contact form integration.',
+        'url': '',
+        'img_path1': 'static/images/portfolio_code.png',
+        'img_path2': ''
+        }
+}
+
+projects_data = []
+for p_id in projects_list:
+    project_data = projects_list[p_id]
+    projects_data.append( (project_data['id'], project_data['name'], project_data['description'], project_data['url'], project_data['img_path1'], project_data['img_path2']) )
+    
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
+    return render_template('index.html', projects=projects_data)
 
+
+@app.route("/project/<num>")
+def project_detail(num):
+    try:
+        proj_dict = projects_list[int(num) - 1]
+    except:
+        return f"<h1>Invalid value for Project: {num}</h1>"
+    # a little bonus function, imported on line 2 above
+    ord = make_ordinal( int(num) )
+    return render_template('project_detail.html', proj=proj_dict, ord=ord, the_title=proj_dict['Name'])
+    
 
 @app.route('/send_email', methods=['POST'])
 def send_email():
