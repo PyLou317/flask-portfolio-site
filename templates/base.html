@@ -22,10 +22,11 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hero-banner.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/hero-banner.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/project_detail.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}" />
 
     <!-- Awesome Font -->
@@ -67,8 +68,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="static/js/navbar.js"></script>
-    <script src="static/js/index.js"></script>
+    <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 
     {% block extra_js %} {% endblock extra_js %}
   </body>
