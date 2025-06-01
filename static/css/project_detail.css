@@ -1,0 +1,32 @@
+.project-container {
+    min-height: 80vh;
+    width: 60vw;
+}
+
+.project_text {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.project-container .section-container {
+    margin-bottom: 0;
+}
+
+#project-img-container {
+    background-color: #cccccc;
+    min-height: 70vh;
+}
+
+.icon {
+    color: #fff;
+    border-width: 1px;
+    border-color: #fff;
+    font-family: Larsseit,sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    border: 1.3px solid #fff;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    display: inline-block;
+}

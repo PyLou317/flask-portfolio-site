@@ -3,6 +3,28 @@
 {% block title %} Project Detail Page {% endblock %}
 
 {% block content %}
-Project Details
-{{ project_name }}
+<div class="container project-container d-flex justify-content-center">
+    <div class="section-container px-5">
+        <div class="col-6">
+            <h1 id="project_name" class="text-white header">{{ project_name | upper }}</h1>
+            <p class="text-white project_text">After spending hours every year organizing and categorizing my bank transactions I decided to build a simple, yet effective personal finance tracker.</p>
+            <p class="text-white project_text mt-4">A place where I can upload my bank statements, categorize my spending, and create budgets.</p>
+            <div class="d-flex flex-wrap icon-container mt-5">
+                <div class="icon m-1">
+                    80% less time
+                </div>
+                <div class="icon m-1">
+                    Postgres DB
+                </div>
+                <div class="icon m-1">
+                    Smart categorization
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="project-img-container"class="container bg-white">
+
+</div>
 {% endblock content %}
