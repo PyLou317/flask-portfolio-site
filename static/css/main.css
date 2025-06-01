@@ -11,12 +11,12 @@
   --site-muted-text: #6c757d;
 }
 
-/* Larsseit Regular (or Normal) */
+/* Larsseit This */
 @font-face {
-    font-family: 'Larsseit'; /* This is the name you'll use in your CSS */
-    src: url('../fonts/larsseit_regular-webfont.woff2') format('woff2'), /* Adjust path if needed */
-         url('../fonts/larsseit_regular-webfont.woff') format('woff');
-    font-weight: 400; /* or 'normal' */
+    font-family: 'Larsseit';
+    src: url('fonts/larsseitthin-webfont.woff2') format('woff2'),
+         url('fonts/larsseitthin-webfont.woff') format('woff');
+    font-weight: 100; 
     font-style: normal;
     font-display: swap; /* Important for performance */
 }
@@ -24,9 +24,9 @@
 /* Larsseit Medium */
 @font-face {
     font-family: 'Larsseit';
-    src: url('../fonts/larsseitmedium-webfont.woff2') format('woff2'),
-         url('../fonts/larsseitmedium-webfont.woff') format('woff');
-    font-weight: 500; /* or a custom value if your font specifies it */
+    src: url('fonts/larsseitmedium-webfont.woff2') format('woff2'),
+         url('fonts/larsseitmedium-webfont.woff') format('woff');
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -34,9 +34,9 @@
 /* Larsseit Bold */
 @font-face {
     font-family: 'Larsseit';
-    src: url('../fonts/larsseitbold-webfont.woff2') format('woff2'),
-         url('../fonts/larsseitbold-webfont.woff') format('woff');
-    font-weight: 700; /* or 'bold' */
+    src: url('fonts/larsseitbold-webfont.woff2') format('woff2'),
+         url('fonts/larsseitbold-webfont.woff') format('woff');
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -44,9 +44,9 @@
 /* Larsseit Extra Bold */
 @font-face {
     font-family: 'Larsseit';
-    src: url('../fonts/larsseitextrabold-webfont.woff2') format('woff2'),
-         url('../fonts/larsseitextrabold-webfont.woff') format('woff');
-    font-weight: 900; /* or 'bold' */
+    src: url('fonts/larsseitextrabold-webfont.woff2') format('woff2'),
+         url('fonts/larsseitextrabold-webfont.woff') format('woff');
+    font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
@@ -54,8 +54,8 @@
 /* Larsseit Thin Italic */
 @font-face {
     font-family: 'Larsseit';
-    src: url('../fonts/larsseitthinitalic-webfont.woff2') format('woff2'),
-         url('../fonts/larsseitthinitalic-webfont.woff') format('woff');
+    src: url('fonts/larsseitthinitalic-webfont.woff2') format('woff2'),
+         url('fonts/larsseitthinitalic-webfont.woff') format('woff');
     font-weight: 100; /* or 'thin' if your font supports it */
     font-style: italic;
     font-display: swap;
@@ -89,11 +89,12 @@ a {
 }
 
 .header {
-  font-weight: bolder;
+  font-weight: 900 !important;
   font-size: 7rem;
   color: white;
   letter-spacing: -6px;
   transition: transform 0.3s ease-out;
+  text-shadow: 0 9px 20px #ffffff1f;
 }
 
 .header:hover {
@@ -113,6 +114,7 @@ a {
     width: 70px;
     height: 70px;
 }
+
 /* --------- Navbar -------- */
 .navbar-container {
   background-color: var(--background);
@@ -197,5 +199,14 @@ a {
 @media (max-width: 992px) {
 .header {
   font-size: 3.5rem;
+}
+
+#skills-heading {
+    font-size: 2.2rem;
+}
+
+.icon-img {
+    width: 50px;
+    height: 50px;
 }
 }
