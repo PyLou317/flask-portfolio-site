@@ -72,12 +72,11 @@ def send_email():
         subject = request.form.get('subject')
         message_content = request.form.get('message')
 
-        # Basic validation
         if not name or not email or not subject or not message_content:
             flash('All fields are required. Please fill them out.', 'danger')
             return redirect(url_for('index') + '#contact-me')
 
-        # Check if SendGrid API Key is set
+        # Check if Gmail API Key is set
         if not GMAIL_SENDER_EMAIL or not GMAIL_APP_PASSWORD:
             flash('Server error: Email sending credentials not configured.', 'danger')
             print("GMAIL_SENDER_EMAIL or GMAIL_APP_PASSWORD is not set in environment variables!")
@@ -100,9 +99,7 @@ def send_email():
 
             # Connect to Gmail's SMTP server
             with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-                # Log in to Gmail account
                 smtp.login(GMAIL_SENDER_EMAIL, GMAIL_APP_PASSWORD)
-                # Send the email
                 smtp.send_message(msg)
 
             flash('Your message has been sent successfully! Thank you.', 'success')
