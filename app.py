@@ -17,7 +17,7 @@ RECEIVER_EMAIL = config('RECEIVER_EMAIL', 'the_email_you_want_messages_sent_to@e
 projects_list = {
     1: {
         'id': 1,
-        'name': 'Evergreen Financial',
+        'name': 'Evergreen',
         'description': 'A personal finance tracker with smart categorization and budget setting, to help you manage your day-to-day spending.',
         'url': '',
         'img_path1': 'static/images/evergreen_finance1.png',
@@ -35,7 +35,7 @@ projects_list = {
     
     3: {
         'id': 3,
-        'name': 'My Portfolio Site',
+        'name': 'Portfolio Site',
         'description': 'A simple Flask portfolio site with Gmail contact form integration.',
         'url': '',
         'img_path1': 'static/images/portfolio_code.png',
