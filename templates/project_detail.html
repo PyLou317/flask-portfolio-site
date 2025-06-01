@@ -5,26 +5,79 @@
 {% block content %}
 <div class="container project-container d-flex justify-content-center">
     <div class="section-container px-5">
-        <div class="col-6">
+        <div class="col-12 col-lg-6">
             <h1 id="project_name" class="text-white header">{{ project_name | upper }}</h1>
-            <p class="text-white project_text">After spending hours every year organizing and categorizing my bank transactions I decided to build a simple, yet effective personal finance tracker.</p>
-            <p class="text-white project_text mt-4">A place where I can upload my bank statements, categorize my spending, and create budgets.</p>
-            <div class="d-flex flex-wrap icon-container mt-5">
-                <div class="icon m-1">
-                    80% less time
+            {% if proj.id == 1 %}
+                <p class="text-white project_text">After spending hours every year organizing and categorizing my bank transactions I decided to build a simple, yet effective personal finance tracker.</p>
+                <p class="text-white project_text mt-4">A place where I can upload my bank statements, categorize my spending, and create budgets.</p>
+                <div class="d-flex flex-wrap icon-container mt-5">
+                    <div class="icon m-1">
+                        Django
+                    </div>
+                    <div class="icon m-1">
+                        Bootstrap5
+                    </div>
+                    <div class="icon m-1">
+                        allAuth
+                    </div>
+                    <div class="icon m-1">
+                        chartJs
+                    </div>
+                    <div class="icon m-1">
+                        Python
+                    </div>
+                    <div class="icon m-1">
+                        Javascript
+                    </div>
                 </div>
-                <div class="icon m-1">
-                    Postgres DB
+                {% elif proj.id == 2 %}
+                <p class="text-white project_text">A client needed an MVP for a restaurant loyalty program.</p>
+                <p class="text-white project_text mt-4">I built a two-sided platform. One side for the customer, and one side for the business to manage and monitor their users.</p>
+                <div class="d-flex flex-wrap icon-container mt-5">
+                    <div class="icon m-1">
+                        Django
+                    </div>
+                    <div class="icon m-1">
+                        Bootstrap5
+                    </div>
+                    <div class="icon m-1">
+                        qrCode
+                    </div>
+                    <div class="icon m-1">
+                        allAuth
+                    </div>
+                    <div class="icon m-1">
+                        Python
+                    </div>
+                    <div class="icon m-1">
+                        Javascript
+                    </div>
                 </div>
-                <div class="icon m-1">
-                    Smart categorization
+                {% elif proj.id == 3 %}
+                <p class="text-white project_text">A place to showcase my work.</p>
+                <p class="text-white project_text mt-4">Originally, I was building this site with Django but decided that Flask made more sense for a static site.</p>
+                <div class="d-flex flex-wrap icon-container mt-5">
+                    <div class="icon m-1">
+                        Flask
+                    </div>
+                    <div class="icon m-1">
+                        Gmail Integration
+                    </div>
+                    <div class="icon m-1">
+                        Bootstrap5
+                    </div>
+                    <div class="icon m-1">
+                        Jinja
+                    </div>
                 </div>
-            </div>
+            {% endif %}
         </div>
     </div>
 </div>
 
 <div id="project-img-container"class="container bg-white">
-
+    {% if proj.id == 1 %}
+        <img src="{{ proj.img_path1 }}" alt="">
+    {% endif %}
 </div>
 {% endblock content %}
