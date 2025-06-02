@@ -64,14 +64,11 @@
 
 @media screen and (min-width: 426px) {
   .title-header {
-    font-size: 4rem;
     line-height: 5rem;
-    letter-spacing: -2px;
     margin-bottom: 0;
   }
 
   .tag-line {
-    font-size: .8rem;
     display: block;
     letter-spacing: -0.5px;
   }
@@ -79,7 +76,6 @@
   .btn-connect {
     font-size: 1rem;
     padding: 5px 15px;
-    margin-left: auto;
     margin-top: 0.8rem;
   }
 }
@@ -88,7 +84,6 @@
   .title-header {
     font-size: 5.2rem;
     line-height: 5rem;
-    letter-spacing: -2px;
     margin-bottom: 0;
   }
 
@@ -99,7 +94,7 @@
   }
 
   .tag-line {
-    font-size: 1.33rem;
+    font-size: 1.6rem;
     display: block;
     letter-spacing: -0.5px;
   }
