@@ -20,8 +20,8 @@ projects_list = {
         'name': 'Evergreen',
         'description': 'A personal finance tracker with smart categorization and budget setting, to help you manage your day-to-day spending.',
         'url': '',
-        'img_path1': 'static/images/evergreen_finance1.png',
-        'img_path2': 'static/images/evergreen_finance2.png'
+        'img_path1': 'static/images/projects/evergreen_finance1.png',
+        'img_path2': ''
         },
     
     2: {
@@ -29,7 +29,7 @@ projects_list = {
         'name': 'Table Perks',
         'description': 'Mobile first restaurant loyalty app. Designed to incentavize guest to bring referrals by offering special deals and reward points for each visit.',
         'url': 'https://bring-a-friend-production.up.railway.app/',
-        'img_path1': 'static/images/table_perks1.png',
+        'img_path1': 'static/images/projects/table_perks1.png',
         'img_path2': ''
         },
     
@@ -38,7 +38,7 @@ projects_list = {
         'name': 'Portfolio Site',
         'description': 'A simple Flask portfolio site with Gmail contact form integration.',
         'url': '',
-        'img_path1': 'static/images/portfolio_code.png',
+        'img_path1': 'static/images/projects/portfolio_code.png',
         'img_path2': ''
         }
 }
