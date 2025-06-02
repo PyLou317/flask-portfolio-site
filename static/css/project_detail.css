@@ -1,6 +1,6 @@
 .project-container {
     min-height: 80vh;
-    width: 60vw;
+    width: 80%;
 }
 
 .project_text {
@@ -29,4 +29,11 @@
     border-radius: .5rem;
     padding: .5rem 1rem;
     display: inline-block;
+}
+
+@media screen and (max-width: 992px) {
+    .project-container {
+    min-height: 80vh;
+    width: 100%;
+}
 }
