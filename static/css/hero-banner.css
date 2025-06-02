@@ -7,18 +7,27 @@
 
 .title-header {
   color: white;
-  font-size: 9.88rem;
-  letter-spacing: -5px;
+  font-size: 4rem;
+  line-height: 5rem;
+  letter-spacing: -2px;
   font-weight: 900;
-  margin-bottom: -15px;
+  margin-bottom: 0px;
   margin-left: 0;
   margin-right: 0;
   text-shadow: 0 9px 20px #ffffff1f;
 }
 
+#tag-line-div {
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center !important;
+}
+
 .tag-line {
-  font-size: 2.1rem;
+  font-size: 1.5rem;
   font-weight: 100;
+  text-align: center;
   color: var(--color-text-light);
 }
 
@@ -35,10 +44,12 @@
   border-radius: 30px !important;
   color: var(--color-text-light);
   border: 1px solid var(--color-text-light);
+  padding: 5px 15px;
+  margin-top: 10px;
 }
 
 .btn-connect:hover {
-    color: white;
+  color: white;
 }
 
 .btn-connect:not([disabled]):focus {
@@ -51,25 +62,75 @@
     0.125rem 0.125rem 1rem rgba(255, 255, 255, 0.5);
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 426px) {
   .title-header {
-    font-size: 4.8rem;
+    font-size: 4rem;
+    line-height: 5rem;
+    letter-spacing: -2px;
+    margin-bottom: 0;
+  }
+
+  .tag-line {
+    font-size: .8rem;
+    display: block;
+    letter-spacing: -0.5px;
+  }
+
+  .btn-connect {
+    font-size: 1rem;
+    padding: 5px 15px;
+    margin-left: auto;
+    margin-top: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title-header {
+    font-size: 5.2rem;
+    line-height: 5rem;
     letter-spacing: -2px;
     margin-bottom: 0;
   }
 
   #tag-line-div {
     align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between !important;
   }
 
   .tag-line {
-    font-size: 1.4rem;
+    font-size: 1.33rem;
     display: block;
-    letter-spacing: -.5px;
+    letter-spacing: -0.5px;
   }
 
   .btn-connect {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 5px 15px;
   }
+}
+
+@media screen and (min-width: 993px) {
+  .title-header {
+    font-size: 9.88rem;
+    letter-spacing: -6px;
+    line-height: 10rem;
   }
+
+  #tag-line-div {
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 1.5rem;
+  }
+
+  .tag-line {
+    font-size: 2.2rem;
+    display: block;
+    letter-spacing: -0.5px;
+  }
+
+  .btn-connect {
+    font-size: 1.2rem;
+    padding: 5px 15px;
+  }
+}
