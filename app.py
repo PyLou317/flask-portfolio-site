@@ -20,7 +20,7 @@ projects_list = {
         'name': 'Evergreen',
         'description': 'A personal finance tracker with smart categorization and budget setting, to help you manage your day-to-day spending.',
         'url': '',
-        'img_path1': 'static/images/projects/ef-langing-page.png',
+        'img_path1': 'static/images/projects/ef_landing_page.png',
         'img_path2': ''
         },
     
