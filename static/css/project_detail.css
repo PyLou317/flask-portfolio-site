@@ -12,9 +12,9 @@
     margin-bottom: 0;
 }
 
-#project-img-container {
-    background-color: #cccccc;
-    min-height: 70vh;
+#project-img-container img {
+    border-radius: 30px;
+    box-shadow: 8px 8px 15px #ffffff8e;
 }
 
 .icon {

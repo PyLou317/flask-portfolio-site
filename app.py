@@ -17,13 +17,13 @@ RECEIVER_EMAIL = config('RECEIVER_EMAIL', 'the_email_you_want_messages_sent_to@e
 projects_list = {
     1: {
         'id': 1,
-        'name': 'Evergreen',
+        'name': 'Evergreen Financial',
         'description': 'A personal finance tracker with smart categorization and budget setting, to help you manage your day-to-day spending.',
         'url': '',
         'img_path1': 'static/images/projects/ef_landing_page.png',
         'img_path2': 'static/images/projects/ef_dashboard.png',
-        'img_path3': 'static/images/projects/transaction.png',
-        'img_path4': 'static/images/projects/mobile_3.png.png'
+        'img_path3': 'static/images/projects/transactions.png',
+        'img_path4': 'static/images/projects/mobile_3.png'
         },
     
     2: {
@@ -52,7 +52,7 @@ projects_list = {
 projects_data = []
 for p_id in projects_list:
     project_data = projects_list[p_id]
-    projects_data.append( (project_data['id'], project_data['name'], project_data['description'], project_data['url'], project_data['img_path1'], project_data['img_path2']) )
+    projects_data.append( (project_data['id'], project_data['name'], project_data['description'], project_data['url'], project_data['img_path1'], project_data['img_path2'], project_data['img_path3'], project_data['img_path4']) )
     
 
 @app.route("/", methods=['GET', 'POST'])
@@ -67,6 +67,7 @@ def project_detail(num):
         proj_dict = projects_list[int(num)]
     except:
         return f"<h1>Invalid value for Project: {num}</h1>"
+    print(proj_dict)
     return render_template('project_detail.html', proj=proj_dict, project_name=proj_dict['name'])
     
 

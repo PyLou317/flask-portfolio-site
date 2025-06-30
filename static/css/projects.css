@@ -22,7 +22,7 @@ project-card {
 }
 
 .project-img-container {
-  height: 420px;
+  height: fit-content;
   overflow: hidden;
   background-color: var(--site-image-placeholder-bg);
 }
