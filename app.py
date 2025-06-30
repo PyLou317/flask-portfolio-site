@@ -21,7 +21,9 @@ projects_list = {
         'description': 'A personal finance tracker with smart categorization and budget setting, to help you manage your day-to-day spending.',
         'url': '',
         'img_path1': 'static/images/projects/ef_landing_page.png',
-        'img_path2': ''
+        'img_path2': 'static/images/projects/ef_dashboard.png',
+        'img_path3': 'static/images/projects/transaction.png',
+        'img_path4': 'static/images/projects/mobile_3.png.png'
         },
     
     2: {
@@ -30,7 +32,9 @@ projects_list = {
         'description': 'Mobile first restaurant loyalty app. Designed to incentavize guest to bring referrals by offering special deals and reward points for each visit.',
         'url': 'https://bring-a-friend-production.up.railway.app/',
         'img_path1': 'static/images/projects/table_perks1.png',
-        'img_path2': ''
+        'img_path2': '',
+        'img_path3': '',
+        'img_path4': ''
         },
     
     3: {
@@ -39,7 +43,9 @@ projects_list = {
         'description': 'A simple Flask portfolio site with Gmail contact form integration.',
         'url': '',
         'img_path1': 'static/images/projects/portfolio_code.png',
-        'img_path2': ''
+        'img_path2': '',
+        'img_path3': '',
+        'img_path4': ''
         }
 }
 
