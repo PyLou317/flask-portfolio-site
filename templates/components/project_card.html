@@ -1,20 +1,15 @@
 <div class="col-sm-12 col-md-10 col-lg-8 my-4">
     <div class="project-card bg-light rounded-3 d-flex h-100 flex-column">
         <div class="project-img-container w-100 bg-gray-300 d-flex align-items-center justify-content-center">
-            <img src="{{ project[4] }}" class="d-block w-100" alt="...">
+            <img src="{{ proj['img_path1'] }}" class="d-block w-100" alt="...">
         </div>
         <div class="project-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
             <div>
                 <h3 class="project-title fw-bold mb-2 text-dark">
-                    <a href="{{ url_for( 'project_detail', num=project[0] ) }}" class="text-decoration-none">{{ project[1] }} <i class="fa-solid fa-circle-arrow-right"></i></a>
+                    <a href="{{ url_for( 'project_detail', num=proj['id'] ) }}" class="text-decoration-none">{{ proj['name'] }} <i class="fa-solid fa-circle-arrow-right"></i></a>
                 </h3>
-                <p class="project-description">{{ project[2] }}</p>
+                <p class="project-description">{{ proj['description'] }}</p>
             </div>
         </div>
     </div>
 </div>
-    
-            
-
-
-    

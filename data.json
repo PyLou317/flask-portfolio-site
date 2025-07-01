@@ -1,0 +1,24 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Evergreen Financial",
+      "description": "A personal finance tracker with smart categorization and budget setting, to help you manage your day-to-day spending.",
+      "url": " ",
+      "img_path1": "static/images/projects/egf/ef_landing_page.png",
+      "img_path2": "static/images/projects/egf/dashboard.png",
+      "img_path3": "static/images/projects/egf/transactions.png",
+      "img_path4": "static/images/projects/egf/mobile_3.png"
+    },
+    {
+      "id": 3,
+      "name": "Portfolio Site",
+      "description": "A simple Flask portfolio site with Gmail contact form integration.",
+      "url": "",
+      "img_path1": "static/images/projects/portfolio_code.png",
+      "img_path2": "",
+      "img_path3": "",
+      "img_path4": ""
+    }
+  ]
+}

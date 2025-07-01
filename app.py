@@ -4,6 +4,7 @@ from flask_wtf.csrf import CSRFProtect
 from decouple import config
 import smtplib
 from email.mime.text import MIMEText
+import json
 
 app = Flask(__name__)
 app.secret_key = config('FLASK_SECRET_KEY')
@@ -14,60 +15,33 @@ GMAIL_SENDER_EMAIL = config('GMAIL_SENDER_EMAIL', 'your_gmail_address@gmail.com'
 GMAIL_APP_PASSWORD = config('GMAIL_APP_PASSWORD', 'your_gmail_app_password')
 RECEIVER_EMAIL = config('RECEIVER_EMAIL', 'the_email_you_want_messages_sent_to@example.com')
 
-projects_list = {
-    1: {
-        'id': 1,
-        'name': 'Evergreen Financial',
-        'description': 'A personal finance tracker with smart categorization and budget setting, to help you manage your day-to-day spending.',
-        'url': '',
-        'img_path1': 'static/images/projects/ef_landing_page.png',
-        'img_path2': 'static/images/projects/ef_dashboard.png',
-        'img_path3': 'static/images/projects/transactions.png',
-        'img_path4': 'static/images/projects/mobile_3.png'
-        },
-    
-    2: {
-        'id': 2,
-        'name': 'Table Perks',
-        'description': 'Mobile first restaurant loyalty app. Designed to incentavize guest to bring referrals by offering special deals and reward points for each visit.',
-        'url': 'https://bring-a-friend-production.up.railway.app/',
-        'img_path1': 'static/images/projects/table_perks1.png',
-        'img_path2': '',
-        'img_path3': '',
-        'img_path4': ''
-        },
-    
-    3: {
-        'id': 3,
-        'name': 'Portfolio Site',
-        'description': 'A simple Flask portfolio site with Gmail contact form integration.',
-        'url': '',
-        'img_path1': 'static/images/projects/portfolio_code.png',
-        'img_path2': '',
-        'img_path3': '',
-        'img_path4': ''
-        }
-}
 
-projects_data = []
-for p_id in projects_list:
-    project_data = projects_list[p_id]
-    projects_data.append( (project_data['id'], project_data['name'], project_data['description'], project_data['url'], project_data['img_path1'], project_data['img_path2'], project_data['img_path3'], project_data['img_path4']) )
+# ----- Load Project Data ----- #
+with open('data.json', 'r') as file:
+    data = json.load(file)
+projects = data.get("projects", [])
+for project in projects:
+    print("Project:", project)
+    print("")
     
 
+# ----- Views ----- #
 @app.route("/", methods=['GET', 'POST'])
 def index():
-    return render_template('index.html', projects=projects_data)
+    return render_template('index.html', projects=projects)
 
 
 @app.route("/project/<num>")
 def project_detail(num):
-    print(projects_list[int(num)])
     try:
-        proj_dict = projects_list[int(num)]
+        proj_id = int(num)
     except:
         return f"<h1>Invalid value for Project: {num}</h1>"
-    print(proj_dict)
+    
+    proj_dict = None
+    for project in projects:
+        if project.get('id') == proj_id:
+            proj_dict = project
     return render_template('project_detail.html', proj=proj_dict, project_name=proj_dict['name'])
     
 
@@ -122,3 +96,15 @@ def send_email():
 
 if __name__ == "__main__":
     app.run(debug=True, port=config("PORT", default=5000))
+    
+    
+# {
+# "id": 2,
+# "name": "Table Perks",
+# "description": "Mobile first restaurant loyalty app. Designed to incentavize guest to bring referrals by offering special deals and reward points for each visit.",
+# "url": "https://bring-a-friend-production.up.railway.app/",
+# "img_path1": "static/images/projects/table_perks/mobile3.png",
+# "img_path2": "",
+# "img_path3": "",
+# "img_path4": ""
+# },
