@@ -15,9 +15,9 @@
       "name": "Portfolio Site",
       "description": "A simple Flask portfolio site with Gmail contact form integration.",
       "url": "",
-      "img_path1": "static/images/projects/portfolio_code.png",
-      "img_path2": "",
-      "img_path3": "",
+      "img_path1": "static/images/projects/portfolio_site/landing_page.png",
+      "img_path2": "static/images/projects/portfolio_site/latest_work_page.png",
+      "img_path3": "static/images/projects/portfolio_site/contact_page.png",
       "img_path4": ""
     }
   ]
