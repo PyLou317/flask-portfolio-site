@@ -11,6 +11,16 @@
       "img_path4": "static/images/projects/egf/mobile_3.png"
     },
     {
+      "id": 2,
+      "name": "Spread Tracker",
+      "description": "A Dashboard CRM for salespeople in the staffing and recruiting industry.",
+      "url": " ",
+      "img_path1": "static/images/projects/spread_tracker/st_landing_page.png",
+      "img_path2": "static/images/projects/spread_tracker/st_dashboard.png",
+      "img_path3": "static/images/projects/spread_tracker/st_contractor_page.png",
+      "img_path4": "static/images/projects/spread_tracker/mobile_3.png"
+    },
+    {
       "id": 3,
       "name": "Portfolio Site",
       "description": "A simple Flask portfolio site with Gmail contact form integration.",

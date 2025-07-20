@@ -96,15 +96,3 @@ def send_email():
 
 if __name__ == "__main__":
     app.run(debug=True, port=config("PORT", default=5000))
-    
-    
-# {
-# "id": 2,
-# "name": "Table Perks",
-# "description": "Mobile first restaurant loyalty app. Designed to incentavize guest to bring referrals by offering special deals and reward points for each visit.",
-# "url": "https://bring-a-friend-production.up.railway.app/",
-# "img_path1": "static/images/projects/table_perks/mobile3.png",
-# "img_path2": "",
-# "img_path3": "",
-# "img_path4": ""
-# },
