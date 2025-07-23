@@ -76,4 +76,9 @@ project-card {
   .project-card {
     margin-bottom: 1.5rem;
   }
+
+  .mobile-btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
 }
