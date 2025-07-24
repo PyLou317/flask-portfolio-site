@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
 
-    <meta
-      name="description"
-      content="{% block description %}Lucas Patriquin's Digital Playground: a personal portfolio{% endblock %}"
-    />
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}Lucas Patriquin | Developer & Sales Professional{% endblock %}</title>
+
+    <meta name="description" content="{% block description %}Lucas Patriquin's portfolio: a unique blend of B2B sales expertise and Python web development (Flask, Django), building elegant solutions for real-world problems.{% endblock %}">
+    
+    <meta property="og:title" content="{% block og_title %}{{ self.title() }}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}{{ self.description() }}{% endblock %}">
+    <meta property="og:url" content="{% block og_url %}{{ request.url }}{% endblock %}">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
